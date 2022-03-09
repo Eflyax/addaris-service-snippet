@@ -1,0 +1,5 @@
+@import '@addarisCore/components/management/mixins.scss';
+
+.customize-service-snippet-options {
+	@include options;
+}
