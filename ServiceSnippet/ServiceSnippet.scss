@@ -1,3 +1,47 @@
 .s-theme-service-snippet {
+	padding: 40px;
+	text-align: center;
+	background-color: white;
 
+	&.service-secondary {
+		border: 1px solid purple;
+
+		h3 {
+			color: purple;
+		}
+	}
+
+	::v-deep {
+		.v-btn {
+			$borderRadius: 25px;
+
+			background-color: white;
+			border-bottom-left-radius: $borderRadius;
+			border-bottom-right-radius: $borderRadius;
+			border-top-left-radius: $borderRadius;
+			border-top-right-radius: $borderRadius;
+			border: 2px solid #BFBFBF;
+			text-align: left;
+			text-decoration: none;
+			width: 150px;
+		}
+
+		.v-btn__content {
+			color: black;
+			display: inline;
+			font-weight: 700;
+			text-decoration: none;
+
+			&::after {
+				background-color: orange;
+				border-radius: 25px;
+				content:'';
+				display: inline-block;
+				height: 20px;
+				position: absolute;
+				width: 20px;
+				z-index: 2;
+			}
+		}
+	}
 }

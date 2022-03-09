@@ -7,16 +7,23 @@ export const CustomizeServiceSnippet = {
 	mixins: [optionSettingsMixin],
 	data() {
 		return {
-			title: this.t9n ? this.t9n('Customize ServiceSnippet', {ctx: 'snippets'}) : 'Customize ServiceSnippet'
+			title: this.t9n ? this.t9n('Customize ServiceSnippet', {ctx: 'snippets'}) : 'Customize ServiceSnippet',
+			availableServiceTypes: [{
+				label: this.t9n ? this.t9n('Primary', {ctx: 'snippets'}) : 'Primary',
+				value: 'primary'
+			}, {
+				label: this.t9n ? this.t9n('Secondary', {ctx: 'snippets'}) : 'Secondary',
+				value: 'secondary'
+			}]
 		};
 	},
 	computed: {
-		text: {
+		serviceType: {
 			get(): string {
-				return this.getOption('text');
+				return this.getOption('serviceType');
 			},
 			set(value: string): void {
-				this.setOption('text', value);
+				this.setOption('serviceType', value);
 			}
 		}
 	}

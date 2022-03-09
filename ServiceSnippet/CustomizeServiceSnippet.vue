@@ -1,10 +1,11 @@
 <template>
 	<addaris-form class="customize-service-snippet-options">
 		<addaris-input
-			v-model="text"
+			:value="serviceType"
 			:label="t9n('Text', {ctx: 'snippets-serviceSnippet'})"
-			fixed-label
-			type="text"
+			type="radio"
+			:items="availableServiceTypes"
+			@change="serviceType = $event"
 		/>
 	</addaris-form>
 </template>

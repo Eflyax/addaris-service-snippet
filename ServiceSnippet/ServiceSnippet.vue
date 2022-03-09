@@ -1,7 +1,10 @@
 <template>
 	<section
 		class="s-theme-service-snippet"
-		:class="snippetCls"
+		:class="[
+			snippetCls,
+			'service-' + elementOptions.serviceType
+		]"
 		:style="elementCSS"
 		:data-title="dataTitle"
 		@dragstart="onDragStart"
@@ -12,10 +15,25 @@
 			:scripts="scriptDependencies"
 		/>
 
-		<p><strong>{{ t9n('Snippet', {ctx: 'snippets'}) }}</strong>: ServiceSnippet</p>
-		<p><strong>{{ t9n('Editable text', {ctx: 'snippets'}) }}: </strong> {{ elementOptions.text }}</p>
+		<node-renderer
+			:nodes="nodeImage"
+		/>
 
-		<node-renderer :nodes="nodeParagraph" />
+		<h3>
+			<node-renderer
+				:nodes="nodeTitle"
+			/>
+		</h3>
+
+		<node-renderer
+			:nodes="nodeParagraph"
+		/>
+
+		<div class="service-button">
+			<node-renderer
+				:nodes="button"
+			/>
+		</div>
 	</section>
 </template>
 

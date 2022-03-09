@@ -22,7 +22,10 @@ export const ServiceSnippet = {
 		const
 			nodes = {},
 			nodeNames = [
+				'nodeImage',
+				'nodeTitle',
 				'nodeParagraph',
+				'button'
 			];
 
 		nodeNames.forEach((name, index) => {
@@ -36,7 +39,7 @@ export const ServiceSnippet = {
 	craft: {
 		defaultProps: {
 			elementOptions: {
-				text: ''
+				serviceType: 'primary'
 			},
 			elementStyle: {}
 		},

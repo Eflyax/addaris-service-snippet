@@ -10,8 +10,23 @@
 				:data-title="t9n('ServiceSnippet', {ctx: 'snippets-serviceSnippet'})"
 			>
 				<!-- paragraph -->
+				<Canvas
+					component="Container"
+					:data-title="t9n('Image', {ctx: 'snippets-paragraph'})"
+				/>
+
+				<!-- paragraph -->
+				<paragraph
+					:data-title="t9n('Title', {ctx: 'snippets-paragraph'})"
+				/>
+
+				<!-- paragraph -->
 				<paragraph
 					:data-title="t9n('Paragraph', {ctx: 'snippets-paragraph'})"
+				/>
+
+				<Button
+					:data-title="t9n('Button', {ctx: 'snippets-paragraph'})"
 				/>
 			</service-snippet>
 		</template>
